@@ -1,0 +1,11 @@
+Library
+Logs
+obj
+Packages
+ProjectSettings
+Temp
+UserSettings
+
+.idea
+Assembly-CSharp.csproj
+Assembly-CSharp-Editor.csproj
