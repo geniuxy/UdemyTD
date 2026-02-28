@@ -17,6 +17,11 @@ public class Enemy : MonoBehaviour
         agent.avoidancePriority = Mathf.RoundToInt(agent.speed * 10.0f);
     }
 
+    private void Start()
+    {
+        wayPoints = FindFirstObjectByType<WayPointManager>().GetWayPoints();
+    }
+
     private void Update()
     {
         FaceTarget(agent.steeringTarget);
