@@ -76,6 +76,11 @@ public class Tower : MonoBehaviour
         return possibleTargets[randomIndex];
     }
 
+    protected Vector3 DirectionToEnemy(Transform startPoint)
+    {
+        return (currentEnemy.position - startPoint.position).normalized;
+    }
+
     protected virtual void RotateTowardsEnemy()
     {
         if (!currentEnemy)
