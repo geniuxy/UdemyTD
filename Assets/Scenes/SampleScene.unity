@@ -2078,8 +2078,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentWave:
-    basicEnemyCount: 0
-    fastEnemyCount: 0
+    basicEnemyCount: 4
+    fastEnemyCount: 2
   respawnPoint: {fileID: 1152114749170144416}
   spawnCoolDown: 3
   basicEnemy: {fileID: 1621667896073751828, guid: 54291d27852d782469c0b805a4da7c7c,
@@ -3660,7 +3660,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2004116735}
-  - component: {fileID: 2004116734}
+  - component: {fileID: 2004116736}
   m_Layer: 0
   m_Name: Tower_CrossBow
   m_TagString: Untagged
@@ -3668,21 +3668,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2004116734
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2004116733}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 700d2626a01de394aafe42309e1c719f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentEnemyTransform: {fileID: 0}
-  towerHead: {fileID: 4975291899672034731}
-  rotationSpeed: 5
 --- !u!4 &2004116735
 Transform:
   m_ObjectHideFlags: 0
@@ -3692,7 +3677,7 @@ Transform:
   m_GameObject: {fileID: 2004116733}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.27, y: 1.5, z: -0.67}
+  m_LocalPosition: {x: 5.27, y: 1.5, z: -3.73}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3700,6 +3685,26 @@ Transform:
   - {fileID: 543450652951206077}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2004116736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004116733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f719102fe36062846b63579c9c60672f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentEnemy: {fileID: 0}
+  towerHead: {fileID: 4975291899672034731}
+  rotationSpeed: 60
+  attackCoolDown: 1.5
+  attackRange: 10
+  whatIsEnemy:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &2022231303
 GameObject:
   m_ObjectHideFlags: 0
