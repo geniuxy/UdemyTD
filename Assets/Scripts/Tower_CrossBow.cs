@@ -4,8 +4,17 @@ using UnityEngine;
 
 public class Tower_CrossBow : Tower
 {
+    private Visuals_CrossBow visuals;
+    
     [Header("CrossBow Details")] 
     [SerializeField] private Transform gunPoint;
+
+    protected override void Awake()
+    {
+        base.Awake();
+
+        visuals = GetComponent<Visuals_CrossBow>();
+    }
 
     protected override void Attack()
     {
@@ -17,6 +26,8 @@ public class Tower_CrossBow : Tower
             
             Debug.Log(hitInfo.collider.gameObject.name + " was attacked!");
             Debug.DrawLine(gunPoint.position, hitInfo.point);
+            
+            visuals.EnableAttackVisuals(gunPoint.position, hitInfo.point);
         }
     }
 }

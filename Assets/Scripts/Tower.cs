@@ -17,6 +17,11 @@ public class Tower : MonoBehaviour
     [SerializeField] protected float attackRange = 1.5f;
     [SerializeField] protected LayerMask whatIsEnemy;
 
+    protected virtual void Awake()
+    {
+        
+    }
+
     protected virtual void Update()
     {
         if (!currentEnemy)
