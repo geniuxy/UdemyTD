@@ -7,6 +7,8 @@ public class Tower : MonoBehaviour
 {
     public Transform currentEnemy;
 
+    private bool canRotate = true;
+
     [Header("Tower Setup")]
     [SerializeField] protected Transform towerHead;
     [SerializeField] protected float rotationSpeed = 60.0f;
@@ -19,7 +21,6 @@ public class Tower : MonoBehaviour
 
     protected virtual void Awake()
     {
-        
     }
 
     protected virtual void Update()
@@ -86,12 +87,16 @@ public class Tower : MonoBehaviour
         return (currentEnemy.position - startPoint.position).normalized;
     }
 
+    public void SetCanRotate(bool bCanRotate)
+    {
+        canRotate = bCanRotate;
+    }
+
     protected virtual void RotateTowardsEnemy()
     {
-        if (!currentEnemy)
-        {
-            return;
-        }
+        if (!canRotate) return;
+        
+        if (!currentEnemy)  return;
 
         Vector3 directionToEnemy = currentEnemy.position - towerHead.position;
 
