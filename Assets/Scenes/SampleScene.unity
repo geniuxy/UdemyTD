@@ -5868,6 +5868,9 @@ MonoBehaviour:
   maxIntensity: 150
   startColor: {r: 0, g: 0, b: 0, a: 0}
   endColor: {r: 0.047058824, g: 0.7607843, b: 0.7921569, a: 1}
+  rotor: {fileID: 9126665433591772363}
+  rotorUnloaded: {fileID: 936370223}
+  rotorLoaded: {fileID: 929700910}
   frontString_L: {fileID: 2071239953}
   frontString_R: {fileID: 1316162268}
   frontStartPoint_L: {fileID: 1258728146}
@@ -5880,6 +5883,11 @@ MonoBehaviour:
   backStartPoint_R: {fileID: 1311906151}
   backEndPoint_L: {fileID: 84365898}
   backEndPoint_R: {fileID: 1745888054}
+  lineRenderers:
+  - {fileID: 2071239953}
+  - {fileID: 1316162268}
+  - {fileID: 527416027}
+  - {fileID: 49655248}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
